@@ -1,4 +1,4 @@
-import styles from "@/app/cats/cats.module.css";
+import styles from "../cats.module.css";
 
 export default function Cat() {
     const name = "Waffle";
@@ -8,12 +8,12 @@ export default function Cat() {
 
     // `${}`
     return (
-        <>
-            <div className={styles.page}>Name: {name}</div>
+        <div className={styles.card}>
+            <div>Name: {name}</div>
             <div>Age: {age}</div>
             <div>In 2 year: {age + 2}</div>
             {/*{if (age >= 7) {}}*/}
             {age >= 7 ? 'Insurance is expensive' : 'Insurance is cheap'}
-        </>
+        </div>
     );
 }

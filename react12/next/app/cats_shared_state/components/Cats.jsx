@@ -1,21 +1,22 @@
 import Cat from "./Cat";
 import styles from "../cats.module.css";
-
-const CATS_ARRAY = [{
-    name: 'Waffle',
-    age: 8,
-    id: 1,
-}, {
-    name: 'Cat',
-    age: 1,
-    id: 2
-}, {
-    name: 'Dog',
-    age: 20,
-    id: 3
-}];
+import { use, useState } from "react";
 
 function Cats() {
+    const [catsArray, setCatArray] = useState([{
+        name: 'Waffle',
+        age: 8,
+        id: 1,
+    }, {
+        name: 'Cat',
+        age: 1,
+        id: 2
+    }, {
+        name: 'Dog',
+        age: 20,
+        id: 3
+    }]);
+
     return (
         <div className={styles.container}>
             {/*<Cat name="Waffle" age={8} showChildren={false}>*/}
@@ -24,13 +25,14 @@ function Cats() {
             {/*    <Cat />*/}
             {/*</Cat>*/}
             {/*<Cat name="Cat" age={1} />*/}
-            {CATS_ARRAY.map((cat) => (
+            {catsArray.map((cat) => (
                 <Cat
                     key={cat.id}
                     name={cat.name}
                     age={cat.age}
                 />
             ))}
+            <button>add new</button>
         </div>
     )
 };

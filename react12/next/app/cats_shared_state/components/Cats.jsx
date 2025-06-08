@@ -1,6 +1,8 @@
+'use client';
+
 import Cat from "./Cat";
 import styles from "../cats.module.css";
-import { use, useState } from "react";
+import { useState } from "react";
 
 function Cats() {
     const [catsArray, setCatArray] = useState([{

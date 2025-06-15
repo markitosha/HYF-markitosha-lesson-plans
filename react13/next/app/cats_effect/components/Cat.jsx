@@ -39,6 +39,14 @@ function CatInsurance({ name, age }) {
 }
 
 export default function Cat({ name, age, children, showChildren }) {
+    // useEffect(() => {
+    //     console.log('I am alive!');
+    //
+    //     return () => {
+    //         console.log('I am dead!');
+    //     };
+    // }, []);
+
     return (
         <div className={styles.card}>
             <CatInfo name={name} age={age} />

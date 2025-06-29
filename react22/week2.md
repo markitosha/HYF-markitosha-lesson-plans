@@ -4,7 +4,9 @@ Let's start with homework.
 
 Questions?
 
-1. Customisation of MUI
+1. Router
+2. Ref
+3. Server Components
 
 Common things I've seen in your homework:
 
